@@ -55,7 +55,7 @@ header {
             background-color: #333;
             margin: 6px 0;
             transition: 0.4s;
-            transform-origin: $burger-long/2 1px;
+            transform-origin: calc($burger-long/2) 1px;
         }
 
         .show .bar1 {
@@ -219,7 +219,7 @@ section {
     justify-content: space-evenly;
     align-items: flex-start;
 
-    ul {
+    ul.grid {
         width: 100%;
 
         display: grid;
@@ -417,6 +417,29 @@ section {
 
         }
     }
+
+    ul#more{
+        display: flex;
+        gap: 3rem;
+        
+        width: 100%;
+
+        list-style: none;
+
+        ul{
+            list-style: none;
+            padding: 0;
+
+            a{
+                color: black;
+                text-decoration: none;
+
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
 }
 
 footer {
@@ -430,6 +453,8 @@ footer {
 
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
 
     p {
         padding-left: 1rem;
